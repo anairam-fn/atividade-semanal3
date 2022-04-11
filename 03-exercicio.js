@@ -7,7 +7,7 @@ function dizSituaçaoEscolar(nota1, nota2, nota3) {
   const media = (nota1 + nota2 + nota3) / 3;
   if (media >= 7) {
     return `O aluno foi aprovado com a média ${media.toFixed(1)}.`;
-  } else if (media >= 5 && media <= 6.9) {
+  } else if (media >= 5 && media < 7) {
     return `O aluno está em recuperação com a média ${media.toFixed(1)}.`;
   } else if (media < 5) {
     return `O aluno está reprovado com a média ${media.toFixed(1)}.`;
@@ -15,5 +15,5 @@ function dizSituaçaoEscolar(nota1, nota2, nota3) {
 }
 
 console.log(dizSituaçaoEscolar(9, 6, 7));
-console.log(dizSituaçaoEscolar(9, 5, 5));
+console.log(dizSituaçaoEscolar(6.9, 6.9, 7));
 console.log(dizSituaçaoEscolar(3, 3, 3));
